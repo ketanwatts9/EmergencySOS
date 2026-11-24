@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emergency SOS - Dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚨</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">SOS</span><span>Emergency SOS</span></div>
+      <nav class="nav" id="nav">
+        <a href="#home" data-view="home" data-icon="home"><span>Dashboard</span></a>
+        <a href="#sos" data-view="sos" data-icon="alert"><span>Send SOS</span></a>
+        <a href="#contacts" data-view="contacts" data-icon="users"><span>Contacts</span></a>
+        <a href="#history" data-view="history" data-icon="clock"><span>History</span></a>
+        <a href="#helplines" data-view="helplines" data-icon="phone"><span>Helplines</span></a>
+      </nav>
+      <div class="side-help">In danger right now?<b>112</b><a href="tel:112">Call national emergency number</a></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><h1 id="pageTitle">Dashboard</h1><p class="muted" id="pageSub"></p></div>
+        <div class="top-actions">
+          <button id="themeBtn" class="icon-btn" title="Switch theme" aria-label="Switch theme"></button>
+          <div class="user-chip"><span id="userAvatar"></span><span id="userName"></span></div>
+          <button id="logoutBtn" class="icon-btn" title="Logout" aria-label="Logout"></button>
+        </div>
+      </header>
+
+      <section class="view" id="view-home"></section>
+      <section class="view hidden" id="view-sos"></section>
+      <section class="view hidden" id="view-contacts"></section>
+      <section class="view hidden" id="view-history"></section>
+      <section class="view hidden" id="view-helplines"></section>
+    </main>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

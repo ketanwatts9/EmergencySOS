@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emergency SOS - Sign in</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚨</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <div class="auth-wrap">
+    <section class="hero">
+      <div class="brand"><span class="brand-mark">SOS</span><span>Emergency SOS</span></div>
+      <h1>Help is one tap away.</h1>
+      <p class="lead">Save the people you trust, send an SOS in seconds and keep a record of every alert you have raised.</p>
+      <ul class="hero-points">
+        <li><span data-icon="users"></span><div><b>Priority contacts</b><br>The most important person is always notified first.</div></li>
+        <li><span data-icon="activity"></span><div><b>Live delivery tracking</b><br>Watch each contact get notified in real time.</div></li>
+        <li><span data-icon="shield"></span><div><b>Safety tips</b><br>Instant first-response advice for every emergency type.</div></li>
+      </ul>
+      <p class="hero-sim">Simulation only. No real SMS or call is ever sent.</p>
+    </section>
+
+    <section class="auth-side">
+      <button id="themeBtn" class="icon-btn theme-corner" title="Switch theme" aria-label="Switch theme"></button>
+      <div class="auth-card">
+        <h2 id="formTitle">Welcome back</h2>
+        <p class="muted" id="formSub">Sign in to manage your emergency contacts.</p>
+
+        <div class="tabs">
+          <button id="tabLogin" class="tab active" type="button">Login</button>
+          <button id="tabRegister" class="tab" type="button">Register</button>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <div class="field"><label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="username"></div>
+          <div class="field"><label for="loginPassword">Password</label>
+            <div class="pw-wrap"><input type="password" id="loginPassword" placeholder="Your password" autocomplete="current-password">
+              <button type="button" data-toggle="loginPassword">Show</button></div></div>
+          <p class="form-error" id="loginError"></p>
+          <button type="submit" class="btn primary big" id="loginBtn">Login</button>
+        </form>
+
+        <form id="registerForm" class="hidden" novalidate>
+          <div class="field"><label for="regName">Full name</label>
+            <input type="text" id="regName" placeholder="Ketan Sharma" autocomplete="name" maxlength="50"></div>
+          <div class="field"><label for="regEmail">Email</label>
+            <input type="email" id="regEmail" placeholder="you@example.com" autocomplete="email"></div>
+          <div class="field"><label for="regPassword">Password</label>
+            <div class="pw-wrap"><input type="password" id="regPassword" placeholder="At least 6 characters" autocomplete="new-password">
+              <button type="button" data-toggle="regPassword">Show</button></div>
+            <div class="meter" id="meter"><i></i><i></i><i></i><i></i></div>
+            <p class="hint" id="meterText">Use letters, numbers and symbols for a stronger password.</p></div>
+          <p class="form-error" id="regError"></p>
+          <button type="submit" class="btn primary big" id="regBtn">Create account</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
